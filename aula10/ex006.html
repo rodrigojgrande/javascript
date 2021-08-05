@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <title>Iniciando estudos com DOM</title>
+
+    <style>
+      div#area{
+        font: normal 20pt Arial;
+        background-color: rgb(28, 165, 23);
+        color: white;
+        width: 200px;
+        height: 200px;
+        line-height: 200px;
+        text-align: center;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- <div id="area" onclick="clicar()" onmouseenter="entrar()" onmouseout="sair()">Interaja...</div> -->
+    <div id="area" onclick="clicar()" onmouseenter="entrar()" onmouseout="sair()">Interaja...</div>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+      var a = window.document.getElementById('area')
+      a.addEventListener('click', clicar)
+      a.addEventListener('mouseenter', entrar)
+      a.addEventListener('mouseout', sair)
+
+      function clicar() {
+        a.innerText = 'Clicou!'
+        a.style.background = 'red'
+      }
+
+      function entrar() {
+        a.innerText = 'Entrou!'
+      }
+
+      function sair() {
+        a.innerText = 'Saiu!'
+        a.style.background = 'green'
+      }
+    </script>
+    
+  </body>
+</html>
